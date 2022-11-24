@@ -26,21 +26,21 @@ public class UDP {
         try {
             serverSocket = new DatagramSocket();
         } catch (IOException ex) {
-            Log.i("ERROR", String.valueOf(ex));
+            Log.e("KAMAL", String.valueOf(ex));
         }
     }
     UDP(boolean initialise){
         if(initialise){
-            is_initialised = true;
             init();
+            is_initialised = true;
         }
         else{
             is_initialised = false;
         }
     }
     UDP(){
-        is_initialised = true;
         init();
+        is_initialised = true;
     }
     public void change_ipaddress(String ip_address) {
         init();
@@ -48,7 +48,7 @@ public class UDP {
         try {
             address = InetAddress.getByName(ip_address);
         } catch (UnknownHostException ex) {
-            Log.i("ERROR", String.valueOf(ex));
+            Log.e("KAMAL", String.valueOf(ex));
         }
     }
 
@@ -64,9 +64,9 @@ public class UDP {
                 msg.getBytes().length, address, port);
         try {
             serverSocket.send(msgPacket);
-            Log.i("DEBUG", "message sent: " + msg);
+            Log.d("KAMAL", "message sent: " + msg);
         } catch (Exception ex) {
-            Log.i("ERROR", String.valueOf(ex));
+            Log.e("KAMAL", String.valueOf(ex));
         }
     }
 }

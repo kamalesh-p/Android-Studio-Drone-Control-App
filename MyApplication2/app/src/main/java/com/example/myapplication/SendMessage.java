@@ -13,12 +13,13 @@ import android.widget.EditText;
 
 public class SendMessage extends AppCompatActivity {
     String ipaddress, port;
+    String default_msg = "Hello World";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_message);
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 
         // initialise layout.xml elements
         EditText edit_text_ipaddress = (EditText) findViewById(R.id.ipaddress);
@@ -27,14 +28,13 @@ public class SendMessage extends AppCompatActivity {
         Button button_send = (Button) findViewById(R.id.send);
         // initialise java class
         LocalStorage localStorage = new LocalStorage(getSharedPreferences("Drone", MODE_PRIVATE));
-        UDP udp = new UDP();
+        UDP udp = new UDP(true);
 
         ipaddress = localStorage.read("ipaddress", "192.168.4.1");
         port = localStorage.read("port", "4210");
         udp.change_ipaddress(ipaddress);
         udp.change_port(Integer.parseInt(port));
 
-        String default_msg = "Hello World";
         edit_text_ipaddress.setText(ipaddress); //edit_text_ipaddress.setHint(ipaddress);
         edit_text_port.setText(port); //edit_text_port.setHint(port);
         edit_text_message.setHint(default_msg);
