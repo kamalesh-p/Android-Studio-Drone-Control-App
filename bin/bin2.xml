@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#F44336"
+    tools:context=".JoystickControl"
+    android:id="@+id/layout">
+
+    <ImageButton
+        android:id="@+id/front"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="-2dp"
+        android:background="#FEFEFE"
+        android:rotation="-90"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/maintain"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="60dp"
+        android:background="#FEFEFE"
+        android:rotation="90"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/left" />
+
+    <ImageButton
+        android:id="@+id/middle"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="-2dp"
+        android:background="#FEFEFE"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/down"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/top"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="-2dp"
+        android:background="#FEFEFE"
+        android:rotation="-90"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/middle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/down"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="60dp"
+        android:background="#FEFEFE"
+        android:rotation="90"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FEFEFE"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/maintain"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="-2dp"
+        android:background="#FEFEFE"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintStart_toEndOf="@+id/left" />
+
+    <ImageButton
+        android:id="@+id/right"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="140dp"
+        android:background="#FEFEFE"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/front" />
+
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="140dp"
+        android:background="#009C27B0"
+        android:rotation="-180"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backspace"
+        android:layout_width="67dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:background="#FEFEFE"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/grey"
+        android:gravity="center_horizontal"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#800080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/down"
+        app:layout_constraintStart_toEndOf="@+id/back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
