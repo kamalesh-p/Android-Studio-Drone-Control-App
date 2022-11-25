@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="@color/violet"
+    tools:context=".Potentiometer">
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="TODO"
+        android:scaleType="centerInside"
+        android:src="@drawable/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/joystick_raise_color"
+        android:layout_width="99dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/rounded_rectangle"
+        android:backgroundTint="@color/violet"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+
+    <ImageView
+        android:id="@+id/joystick_raise_white"
+        android:layout_width="77dp"
+        android:layout_height="233dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_rectangle"
+        android:backgroundTint="@color/white"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/joystick_raise_color"
+        app:layout_constraintEnd_toEndOf="@+id/joystick_raise_color"
+        app:layout_constraintTop_toTopOf="@+id/joystick_raise_color" />
+
+    <RelativeLayout
+        android:id="@+id/joystick_raise_ball"
+        android:layout_width="74dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="85dp"
+        app:layout_constraintBottom_toBottomOf="@+id/joystick_raise_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/joystick_raise_white"
+        app:layout_constraintVertical_bias="0.31">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_circle"
+            android:backgroundTint="@color/violet"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="341dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/joystick_raise_message"
+        android:layout_width="100dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="7dp"
+        android:background="@color/grey"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="None(5)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/violet"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="168dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="144dp"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <EditText
+        android:id="@+id/ipaddress"
+        android:layout_width="208dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="7dp"
+        android:background="@color/grey"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/violet"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ipaddresslabel"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="7dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="IP address"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/ipaddress"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

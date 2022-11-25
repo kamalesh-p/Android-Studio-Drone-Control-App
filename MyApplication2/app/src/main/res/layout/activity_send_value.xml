@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendValue">
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="11dp"
+        android:textOff="AIR"
+        android:textOn="FLY"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton_title" />
+
+    <EditText
+        android:id="@+id/ipaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ipaddress_title" />
+
+    <TextView
+        android:id="@+id/value_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="38dp"
+        android:text="Value (0-100)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="244dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="30dp"
+        android:text="Send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value0" />
+
+    <TextView
+        android:id="@+id/toggleButton_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="38dp"
+        android:text="Drone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ipaddress" />
+
+    <EditText
+        android:id="@+id/value0"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value_title" />
+
+    <EditText
+        android:id="@+id/all_motor_value"
+        android:layout_width="67dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton_title2" />
+
+    <TextView
+        android:id="@+id/toggleButton_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="38dp"
+        android:text="All motors"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton_title"
+        app:layout_constraintTop_toBottomOf="@+id/ipaddress" />
+
+    <EditText
+        android:id="@+id/value1"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/value0"
+        app:layout_constraintTop_toBottomOf="@+id/value_title" />
+
+    <EditText
+        android:id="@+id/value2"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="217dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/value1"
+        app:layout_constraintTop_toBottomOf="@+id/ipaddress" />
+
+    <EditText
+        android:id="@+id/value3"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="217dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/value2"
+        app:layout_constraintTop_toBottomOf="@+id/ipaddress" />
+
+    <TextView
+        android:id="@+id/ipaddress_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="143dp"
+        android:text="IP address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
